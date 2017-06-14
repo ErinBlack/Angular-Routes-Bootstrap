@@ -3,18 +3,52 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Gallary of My Life</title>
+  <title>Angular Routes and Bootstrap</title>
   <link rel="stylesheet" href="styles/bootstrap.min.css">
   <link rel="stylesheet" href="styles/style.css">
+    <script src="vendors/jquery.min.js" charset="utf-8"></script>
+  <script src="vendors/bootstrap.min.js" charset="utf-8"></script>
   <script src="vendors/angular.min.js" charset="utf-8"></script>
   <script src="scripts/client.js" charset="utf-8"></script>
-  <script src="angular-route.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-route.min.js" charset="utf-8"></script>
 </head>
 
 <body>
-  <header class="jumbotron">
-    <h1>Up and Running</h1>
+  <nav class="navbar navbar-default navbar-fixed-top text-center">
+  <div class="container-fluid">
+
+    <!-- mobile menu button -->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#!/link">Link</a></li>
+        <li><a href="/#!/groot">Groot</a></li>
+        <li><a href="/#!/the-doctor">The Doctor</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- /.container-fluid -->
+
+  <header class="jumbotron container-fluid" >
+    <h1>The Best Beings in the Universe!</h1>
   </header>
+  <section class = "container" ng-app="routeApp">
+    <ng-view>
+
+    </ng-view>
+  </section>
+
+  <footer>
+
+  </footer>
 </body>
 
 </html>
